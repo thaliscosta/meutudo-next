@@ -6,17 +6,17 @@ import logo from '../../public/images/logo.webp'
 
 function Header() {
 
-    const [isSticky, setSticky] = useState(false);
+    const [isFixed, setIsFixed] = useState(false);
     const buttonRef = useRef(null);
     const navRef = useRef(null);
 
     useEffect(() => {
-        const handleScroll = () => setSticky(window.scrollY > 50 ? true : false);
+        const checkScroll = () => setIsFixed(window.scrollY > 100 ? true : false);
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', checkScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', checkScroll);
         };
     }, []);
 
@@ -28,7 +28,7 @@ function Header() {
     };
 
     return (
-        <header className={`${style.header} ${isSticky ? style.whiteHeader : ''}`}>
+        <header className={`${style.header} ${isFixed ? style.whiteHeader : ''}`}>
             <div className="container">
                 <div className={style.topSite}>
 
