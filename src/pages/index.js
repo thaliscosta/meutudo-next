@@ -1,4 +1,12 @@
 import Head from 'next/head'
+import Header from '@/components/Header/Header'
+import BannerTop from '@/components/BannerTop/BannerTop'
+import Benefits from '@/components/Benefits/Benefits'
+import OurPlatform from '@/components/OurPlatform/OurPlatform'
+import Purpose from '@/components/Purpose/Purpose'
+import Cta from '@/components/Cta/Cta'
+import Download from '@/components/Download/Download'
+import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -10,11 +18,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header>
-
-      </Header>
-
-
+      <Header />
+      <BannerTop />
+      <Benefits />
+      <OurPlatform />
+      <Purpose />
+      <Cta />
+      <Download />
+      <Footer />
+      
     </>
   )
 }
+
+

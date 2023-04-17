@@ -1,0 +1,48 @@
+@import "../../styles/defines";
+
+.sCta {
+    padding: 120px 0;
+    .cta {
+        background-color: #000;
+        max-width: 900px;
+        background: #000;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        width: 100%;
+        padding: 28px;
+        img {
+            width: 219px;
+            height: auto;
+            margin: -6rem auto;
+        }
+        h3 {
+            color: #fff;
+            font-size: rem(28);
+            line-height: rem(38);
+            padding-left: 30px;
+            span {
+                color: $pink;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        padding: 60px 0;
+        .cta {
+            flex-direction: column;
+            padding: 20px 15px;
+            text-align: center;
+            img {
+                margin: 0;
+            }
+            h3 {
+                font-size: rem(22);
+                line-height: rem(32);
+                padding-left: 0;
+            }
+        }
+    }
+}

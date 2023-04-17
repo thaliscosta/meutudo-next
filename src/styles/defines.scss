@@ -1,0 +1,6 @@
+@function rem($pixels, $context: 16) {
+    @return ($pixels / $context) * 1rem;
+}
+
+$font1: "Montserrat", sans-serif;
+$pink: #d22688;

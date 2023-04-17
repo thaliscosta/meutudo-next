@@ -1,0 +1,40 @@
+@import "../../styles/defines";
+
+.sPurpose {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 145px;
+        .info {
+            h3 {
+                margin-bottom: 30px;
+            }
+
+            p {
+                margin-bottom: 30px;
+                @media (min-width: 992px) {
+                    max-width: 450px;
+                }
+            }
+            a {
+                width: 190px;
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+            }
+        }
+        .img {
+            text-align: right;
+            width: 100%;
+            img {
+                max-width: 520px;
+                height: auto;
+                width: 100%;
+            }
+        }
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
+}

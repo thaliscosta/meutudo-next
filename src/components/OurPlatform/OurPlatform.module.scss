@@ -1,0 +1,79 @@
+@import "../../styles/defines";
+
+.sOurPlatform {
+    padding: 150px 0 120px 0;
+    position: relative;
+    &:before {
+        background-image: url(../../public/images/shape_2.png);
+        content: "";
+        width: 475px;
+        height: 835px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -50px;
+        bottom: 50px;
+        @media (max-width: 1500px) {
+            right: -180px;
+        }
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+    .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 145px;
+        .img {
+            img {
+                max-width: 460px;
+                height: auto;
+            }
+        }
+        .info {
+            .box-title {
+                h3 {
+                    margin-bottom: 25px;
+                }
+            }
+            ul {
+                padding: 0;
+                margin-bottom: 40px;
+                li {
+                    position: relative;
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    &:before {
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        content: "";
+                        background-size: cover;
+                        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cg id='Grupo_9467' data-name='Grupo 9467' transform='translate(-853 -3761)'%3E%3Cg id='Grupo_6063' data-name='Grupo 6063' transform='translate(853 3761)'%3E%3Cg id='Grupo_6062' data-name='Grupo 6062' transform='translate(0 0)'%3E%3Cg id='Grupo_6061' data-name='Grupo 6061'%3E%3Cg id='Grupo_6058' data-name='Grupo 6058' transform='translate(8.073 4.272)'%3E%3Cg id='Grupo_6057' data-name='Grupo 6057'%3E%3Cpath id='Caminho_7971' data-name='Caminho 7971' d='M146.523,64.7a1.281,1.281,0,0,0-1.812,0L129.338,80.034l-5.546-6.024a1.281,1.281,0,0,0-1.885,1.736l6.45,7a1.28,1.28,0,0,0,.915.413h.027a1.283,1.283,0,0,0,.9-.374L146.52,66.516A1.281,1.281,0,0,0,146.523,64.7Z' transform='translate(-121.568 -64.327)' fill='%23d22688'/%3E%3C/g%3E%3C/g%3E%3Cg id='Grupo_6060' data-name='Grupo 6060'%3E%3Cg id='Grupo_6059' data-name='Grupo 6059'%3E%3Cpath id='Caminho_7972' data-name='Caminho 7972' d='M32.719,15.719A1.281,1.281,0,0,0,31.437,17,14.437,14.437,0,1,1,17,2.563,1.281,1.281,0,1,0,17,0,17,17,0,1,0,34,17,1.281,1.281,0,0,0,32.719,15.719Z' transform='translate(0 0)' fill='%23d22688'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+                    }
+                }
+            }
+            .shop {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        padding: 50px 0;
+        .box {
+            flex-direction: column;
+            gap: 30px;
+            .img {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

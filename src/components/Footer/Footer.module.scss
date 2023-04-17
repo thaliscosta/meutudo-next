@@ -1,0 +1,77 @@
+@import "../../styles/defines";
+
+.footer {
+    background-color: #ececec;
+    padding: 60px 0;
+    overflow: hidden;
+    .gridFooter {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+        .item {
+            .logo {
+                img {
+                    width: 160px;
+                    height: auto;
+                }
+            }
+            .socialIcos {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+                a {
+                    transition: 0.3s;
+                    &:hover {
+                        margin-top: -5px;
+                    }
+                }
+            }
+            h3 {
+                font-size: rem(16);
+                margin-bottom: 20px;
+            }
+            p,
+            a {
+                font-size: rem(16);
+                line-height: rem(30);
+            }
+            a {
+                padding: 8px 0;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            ul {
+                padding: 0;
+            }
+
+            span {
+                font-size: rem(14);
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 8px;
+            }
+
+            .tel {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .terms {
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @media (max-width: 991px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}

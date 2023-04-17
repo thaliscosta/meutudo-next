@@ -1,0 +1,107 @@
+@import "../../styles/defines";
+
+.sBenefits {
+    position: relative;
+    &:before {
+        background-image: url("../../public/images/shape_1.png");
+        content: "";
+        width: 513px;
+        height: 525px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -30px;
+        top: 76px;
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .gridBenefits {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: -110px;
+        margin-bottom: 80px;
+        .item {
+            background-color: #fff;
+            box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            z-index: 99;
+            position: relative;
+            .ico {
+                img {
+                    width: 50px;
+                    height: auto;
+                }
+            }
+            h3 {
+                font-size: rem(16);
+                line-height: rem(26);
+                min-height: 52px;
+            }
+            p {
+                font-size: rem(14.5);
+                margin: 15px 0 20px 0;
+                min-height: 54px;
+            }
+            &:nth-child(1), &:nth-child(4){
+                h3{
+                    max-width: 40%;
+                }
+            }
+        }
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+            margin-top: 0;
+            padding: 30px 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    .boxCenter {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 65px;
+        text-align: center;
+        h3 {
+            max-width: 500px;
+        }
+        p {
+            max-width: 550px;
+            line-height: rem(26);
+        }
+    }
+
+    .gridItens {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+        @media (min-width: 992px) {
+            padding: 0 50px;
+        }
+        .item {
+            .ico {
+                margin-bottom: 10px;
+                img {
+                    width: 60px;
+                    height: auto;
+                }
+            }
+            h3 {
+                font-size: rem(16);
+                line-height: rem(26);
+            }
+            p {
+                font-size: rem(16);
+                line-height: rem(26);
+                margin: 5px 0 20px 0;
+            }
+        }
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

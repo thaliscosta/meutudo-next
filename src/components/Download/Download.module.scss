@@ -1,0 +1,89 @@
+@import "../../styles/defines";
+
+.sDownload {
+    padding: 100px 0 150px 0;
+    .block {
+        background: #000;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: 440px 1fr;
+        gap: 70px;
+        padding-right: 70px;
+        .img {
+            position: relative;
+            img {
+                position: absolute;
+                left: 70px;
+                top: -90px;
+            }
+            &:before {
+                background-image: url(../../public/images/shape_3.png);
+                width: 440px;
+                height: 312px;
+                max-height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 20px;
+                content: "";
+            }
+        }
+        .info {
+            padding: 40px 0;
+            h2 {
+                font-size: rem(40);
+                line-height: rem(50);
+                margin-bottom: 30px;
+                color: #fff;
+                max-width: 560px;
+                span {
+                    color: $pink;
+                }
+            }
+            .shop {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                a {
+                    border: 1px solid #fff;
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 50px 0;
+        background-color: #000;
+        .block {
+            grid-template-columns: 1fr;
+            border-radius: 0;
+            gap: 0;
+            padding-right: 0;
+            .img {
+                text-align: center;
+                img {
+                    position: relative;
+                    left: inherit;
+                    top: inherit;
+                }
+                &:before {
+                    display: none;
+                }
+            }
+            .info {
+                h2 {
+                    font-size: rem(24);
+                    line-height: rem(34);
+                }
+                .shop {
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
